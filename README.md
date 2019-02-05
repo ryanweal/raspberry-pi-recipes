@@ -9,9 +9,9 @@ An ads-free and malware-free wifi network for every device to enjoy!
 1. Download "lite": https://www.raspberrypi.org/downloads/raspbian/
 2. Flash the SD card: https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
 
-    dd bs=4M if=2018-11-13-raspbian-stretch.img of=/dev/sdX conv=fsync
+    ```dd bs=4M if=2018-11-13-raspbian-stretch.img of=/dev/sdX conv=fsync
     
-    # note: may need to fully unmount first time, do not do /dev/sdb1 here (must be root of device)
+    # note: may need to fully unmount first time, do not do /dev/sdb1 here (must be root of device)```
     
 3. Boot with HDMI and keyboard and ethernet connected, sd card loaded before power.
 4. User pi pass raspberry
@@ -20,7 +20,7 @@ An ads-free and malware-free wifi network for every device to enjoy!
 7. Run updates
 8. Run pi-hole curl command: https://github.com/pi-hole/pi-hole/#one-step-automated-install
 
-    curl -sSL https://install.pi-hole.net | bash
+    ```curl -sSL https://install.pi-hole.net | bash```
 
 9. Edit router settings, set current as fixed IP, accept pi-hole network defaults after confirming
 10. Set router to use pi-hole IP as the DNS
