@@ -28,3 +28,30 @@ An ads-free and malware-free wifi network for every device to enjoy!
 It took me about an hour to do this recipe. It could probably be done in much less time.
 
 I copied down the wrong password for the web UI but when I did "forgot password" it gave me a command to run to reset it. That was helpful.
+
+
+
+## E-ink PaperTTY pi
+
+1. Lite
+2. Flash
+3. Boot with keyboard, hdmi, waveshare 2.13" connected and flash card loaded.
+4. Login
+5. Change pass
+6. Enable SSH, SPI, I2C
+7. Run updates
+8. Install git: apt-get install git
+9. mkdir -p /home/pi/code && cd /home/pi/code
+10. git clone https://github.com/joukos/PaperTTY.git
+11. sudo apt install virtualenvwrapper python3-virtualenv libopenjp2-7
+12. source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+13. add above line to .bashrc
+14. still in PaperTTY directory: mkvirtualenv -p /usr/bin/python3 -r requirements.txt papertty
+15. apt-get install python-libtiff?
+16. screw it, use it without virtualenv: sudo apt install python3-rpi.gpio python3-spidev python3-pil python3-click
+17. sudo ./papertty.py list
+18. sudo ./papertty.py --driver epd2in13 scrub
+19. sudo ./papertty.py --driver epd2in13 terminal # works with physical keyboard
+20. apt-get install tmux
+21. in another ssh window after terminal is running: sudo openvt -fc 1 -- sudo -u pi tmux
+22. tmux attach
