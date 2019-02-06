@@ -61,3 +61,12 @@ I copied down the wrong password for the web UI but when I did "forgot password"
 25. gunzip -c /usr/share/fonts/X11/misc/ter-u12b_unicode.pcf.gz > terminus-12.pcf # note the -c
 26. pilfont.py terminus-12.pcf
 27. sudo ./papertty.py --driver epd2in13 terminal --autofit --font terminus-12.pil --noclear --nocursor --scrub
+
+## E-ink bitmap
+
+- do not install bcm driver or wiredpi
+
+https://github.com/soonuse/epd-library-python
+python-spidev
+python-pil
+ttf-freefont
