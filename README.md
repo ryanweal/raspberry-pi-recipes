@@ -55,3 +55,9 @@ I copied down the wrong password for the web UI but when I did "forgot password"
 20. apt-get install tmux
 21. in another ssh window after terminal is running: sudo openvt -fc 1 -- sudo -u pi tmux
 22. tmux attach
+...
+23. (on different machine) sudo apt install xfonts-terminus
+24. (on different machine, with PI's IP)  scp ter-u12b_unicode.pcf.gz pi@192.168.1.8:/home/pi/code/PaperTTY
+25. gunzip -c /usr/share/fonts/X11/misc/ter-u12b_unicode.pcf.gz > terminus-12.pcf # note the -c
+26. pilfont.py terminus-12.pcf
+27. sudo ./papertty.py --driver epd2in13 terminal --autofit --font terminus-12.pil --noclear --nocursor --scrub
