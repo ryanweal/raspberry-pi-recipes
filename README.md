@@ -70,3 +70,30 @@ https://github.com/soonuse/epd-library-python
 python-spidev
 python-pil
 ttf-freefont
+
+- Create a loader using the example:
+
+```
+import epd2in13
+import time
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+
+def main():
+    epd = epd2in13.EPD()
+    epd.init(epd.lut_full_update)
+
+    image = Image.open('weather.bmp')
+    draw = ImageDraw.Draw(image)
+    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 12)
+    draw.rectangle((0, 240, 130, 250), fill = 0)
+    draw.text((20, 239), 'Hello world!', font = font, fill = 255)
+   
+    epd.clear_frame_memory(0xFF)
+    epd.set_frame_memory(image, 0, 0)
+    epd.display_frame()
+
+if __name__ == '__main__':
+    main()
+```
