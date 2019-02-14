@@ -116,3 +116,7 @@ if __name__ == '__main__':
   - add to headless config
   - sudo apt install imagemagick
  - puppeteer is not my friend right now, different models of pi have different ARM architecture... hmm.
+ - puppeteer-core@v1.11.0 "stable" is the one that works with chromium-browser version 65, which is the default in Stretch
+ - const puppeteer = require('puppeteer-core');        
+ - const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser'});
+ - ... but the site I was scraping has changed selector names today. So it isn't perfect yet.
