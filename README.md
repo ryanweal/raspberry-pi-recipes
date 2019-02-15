@@ -120,3 +120,4 @@ if __name__ == '__main__':
  - const puppeteer = require('puppeteer-core');        
  - const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser'});
  - ... but the site I was scraping has changed selector names today. So it isn't perfect yet.
+ - cleaned up my custom code... "it works now" https://github.com/ryanweal/papercards (sorta, mostly).
