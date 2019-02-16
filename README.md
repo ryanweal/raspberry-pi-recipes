@@ -123,3 +123,8 @@ if __name__ == '__main__':
  - cleaned up my custom code... "it works now" https://github.com/ryanweal/papercards (sorta, mostly).
  - debugging cron
    - `sudo apt install sendmail mutt`
+ - real webserver so we can detach the console completely
+   - `sudo apt install nginx`
+   - `sudo vi /etc/nginx/sites-available/default`
+     - set root to point to cards/dist; include semicolon for best results
+     
