@@ -156,3 +156,18 @@ network={
   - apt-get install git
   - ^D
   
+- raspi-config
+  - interfaces -> enable spi
+  - localization
+    - set locale
+    - set timezone
+  
+- setup PaperTTY (fresher instructions)
+  - sudo apt-get install python-spidev python-pil
+  - sudo apt-get install python-pip
+  - sudo apt install python3-rpi.gpio python3-spidev python3-pil python3-click
+  -  pip install -r requirements.txt # fails - memory error
+  - comment out line 44 of papertty.py (import vncdtool)
+  - sudo ./papertty.py --driver epd2in13 scrub
+
+  
