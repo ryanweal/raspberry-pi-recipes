@@ -169,5 +169,5 @@ network={
   -  pip install -r requirements.txt # fails - memory error
   - comment out line 44 of papertty.py (import vncdtool)
   - sudo ./papertty.py --driver epd2in13 scrub
-
-  
+  - ... tmux stuff
+  - tmux set -g status off (see https://superuser.com/questions/265320/disable-the-status-bar-in-tmux)
