@@ -137,13 +137,22 @@ if __name__ == '__main__':
  - two text files in /boot partition:
    - ssh (just touch the file is enough)
    - wpa_supplicant.conf (with initial defaults)
-     
-    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-    update_config=1
-    country=US
 
-    network={
-      ssid="mynet"
-      psk="mypass"
-      scan_ssid=1
-    }
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+
+network={
+  ssid="mynet"
+  psk="mypass"
+  scan_ssid=1
+}
+```
+   
+- sudo su
+  - apt-get update
+  - apt-get upgrade
+  - apt-get install git
+  - ^D
+  
