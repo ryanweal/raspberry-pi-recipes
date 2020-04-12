@@ -128,3 +128,22 @@ if __name__ == '__main__':
    - `sudo vi /etc/nginx/sites-available/default`
      - set root to point to cards/dist; include semicolon for best results
      
+
+
+
+## Pi Zero-W Headless setup
+
+ - rasbian lite flashed
+ - two text files in /boot partition:
+   - ssh (just touch the file is enough)
+   - wpa_supplicant.conf (with initial defaults)
+     
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
+    country=US
+
+    network={
+      ssid="mynet"
+      psk="mypass"
+      scan_ssid=1
+    }
