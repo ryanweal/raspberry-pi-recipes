@@ -171,3 +171,15 @@ network={
   - sudo ./papertty.py --driver epd2in13 scrub
   - ... tmux stuff
   - tmux set -g status off (see https://superuser.com/questions/265320/disable-the-status-bar-in-tmux)
+  
+### Profanity settings
+    - create "account"
+    - set jid
+    - set account default
+    - set autoconnect
+    - create startup script with launch commands: ~/.local/share/profanity/scripts
+  ```
+/statusbar down
+/occupants hide
+/join wall@conference.kafei.dev
+```
